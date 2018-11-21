@@ -6,10 +6,11 @@
 	<!-- 配置Struts2的常量 -->
 	<constant name="struts.action.extension" value="action"/>
 	
-	<!-- 配置Action -->
-	<package name="ssh1" extends="struts-default" namespace="/">
-		<action name="customer_*" class="customerAction" method="{1}">
-			
+	<package name="crm" extends="struts-default" namespace="/">
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="login">/login.jsp</result>
+			<result name="success" type="redirect">/index.jsp</result>
 		</action>
 	</package>
+	
 </struts>
